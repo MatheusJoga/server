@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CSS-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>SMX_P</title>
+</head>
+<body>
+    <div style="background-color: #292828;">
+    <!--NAV-BAR-->
+    <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #1a1a1a;">
+          <a class="rounded mx-auto d-block" href="home.html">
+            <img src="imagens/friday.svg" alt="" width="100" height="100">
+          </a>
+    </nav>
+    <!--IMAGEM-->
+    <div class = "text-center"style="background-color: #292828; color: #ffffff">
+        <div class="container-lg mx-auto p-5">
+            <a class="bd-placeholder-img rounded-circle">
+                <img src="imagens/bancos/#{{carteira_img}}.png" alt="" width="140" height="140" text-align = "center">
+            </a>
+            <h4 class="mt-4">#{{carteira}}</h4>
+        </div>
+    </div>
+        <!--FORMULARIO-->
+        <div class="container-lg mx-auto p-2" style="background-color: #292828; color: #ffffff">
+            <form action="/avon_smx_p_sucess" method="POST">
+                <input id = "carteira" name="carteira" type="hidden" value="#{{carteira}}"/><!--CRIANDO VARIAVEIS INTERNAS PARA O FORM-->
+                <div class="row justify-content-center">
+                    <div class="col-sm" text-align = "center">
+                        <div class="input-group input-group-sm mb-3">
+                            <span class="input-group-text" id="frase_smx_avon_p">FRASE</span>
+                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="MAX 160 CARACTERES" maxlength="160" name="frase">
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center"><!--CLASSIFICACAO-->
+                    <div class="col-sm-4 justify-content-center text-center" text-align = "center">
+                        <div class="container p-2" >
+                                <div class="justify-content-center" text-align = "center">
+                                    <p>CLASSIFICAÇÃO</p>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" value="Excelente" id="class-excelente" name="cb_classificacao">
+                                    <label class="form-check-label" for="flexCheckExcelente">Excelente</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" value="Bom" id="class-bom" name="cb_classificacao">
+                                    <label class="form-check-label" for="flexCheckBom">Bom</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" value="Indefinido" id="class-indefinido" name="cb_classificacao">
+                                    <label class="form-check-label" for="flexCheckIndefinido">Indefinido</label>
+                                </div>
+                        </div>    
+                    </div>
+                    <div class="col-sm-4 justify-content-center text-center" text-align = "center"><!--ORIGEM-->
+                        <div class="container p-2" >
+                                <div class="justify-content-center" text-align = "center">
+                                    <p>ORIGEM</p>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" value="P" id="cb_origem" name="cb_origem">
+                                    <label class="form-check-label" for="flexCheckOrigemP">P</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" value="T" id="cb_origem" name="cb_origem">
+                                    <label class="form-check-label" for="flexCheckOrigemT">T</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" value="M" id="cb_origem" name="cb_origem">
+                                    <label class="form-check-label" for="flexCheckOrigemM">M</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" value="O" id="cb_origem" name="cb_origem">
+                                    <label class="form-check-label" for="flexCheckOrigemO">O</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" value="B" id="cb_origem" name="cb_origem">
+                                    <label class="form-check-label" for="flexCheckOrigemB">B</label>
+                                </div>
+                        </div>    
+                    </div> 
+                </div>
+                <div class="row justify-content-md-center text-center" text-align = "center"><!--VENCIMENTO-->
+                    <div class="container-sm p-2 mt-3" >
+                        <div class="justify-content-center" text-align = "center">
+                            <strong><p>VENCIMENTO</p></strong>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" value="" id="D0">
+                            <label class="form-check-label" for="flexRadioD0">D0</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" value="" id="D1">
+                            <label class="form-check-label" for="flexRadioD1">D1</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" value="" id="D2">
+                            <label class="form-check-label" for="flexRadioD2">D2</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" value="" id="D3">
+                            <label class="form-check-label" for="flexRadioD3">D3</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" value="" id="D4">
+                            <label class="form-check-label" for="flexRadioD4">D4</label>
+                        </div>
+                    </div>  
+                </div>
+                <div class="row justify-content-md-center text-center" text-align = "center"><!--VENCIMENTO-->
+                    <div class="container-sm p-2 mt-3" >
+                        <button type="submit" class="btn btn-primary">ENVIAR</button>
+                    </div>  
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--JS-->
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
