@@ -7,6 +7,11 @@
     <!--CSS-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <title>SMX_P</title>
+    <!--pegando variaveis-->
+    <!--FORÇA A COR DO BACKGROUND--> 
+    <style>
+        body{background: #292828;}
+    </style>
 </head>
 <body>
     <div style="background-color: #292828;">
@@ -20,15 +25,16 @@
     <div class = "text-center"style="background-color: #292828; color: #ffffff">
         <div class="container-lg mx-auto p-5">
             <a class="bd-placeholder-img rounded-circle">
-                <img src="imagens/bancos/#{{carteira_img}}.png" alt="" width="140" height="140" text-align = "center">
+                <img id="img" src="" alt="" width="140" height="140" text-align = "center">
             </a>
-            <h4 class="mt-4">#{{carteira}}</h4>
+            <h4 class="mt-4" id="carteira">#{{carteira}}</h4>
         </div>
     </div>
         <!--FORMULARIO-->
         <div class="container-lg mx-auto p-2" style="background-color: #292828; color: #ffffff">
             <form action="/avon_smx_p_sucess" method="POST">
-                <input id = "carteira" name="carteira" type="hidden" value="#{{carteira}}"/><!--CRIANDO VARIAVEIS INTERNAS PARA O FORM-->
+                <input id = "automacao" name="automacao" type="hidden" value="#{{carteira}}"/>
+                <input id = "grupo" name="grupo" type="hidden" value=""/><!--CRIANDO VARIAVEIS INTERNAS PARA O FORM-->
                 <div class="row justify-content-center">
                     <div class="col-sm" text-align = "center">
                         <div class="input-group input-group-sm mb-3">
@@ -121,6 +127,7 @@
         </div>
     </div>
     <!--JS-->
+    <script src="js/vars.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
